@@ -19,4 +19,9 @@ export class Boat implements OnInit {
   ngOnInit(): void {
     this.boatEntries = this.boatDataService.boatEntries;
   }
+
+  onDelete(index: number) {
+    this.boatDataService.onDelete(index);
+    this.boatEntries = this.boatDataService.boatEntries;
+  }
 }
