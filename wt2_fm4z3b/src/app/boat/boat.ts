@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BoatEntry } from '../shared/boat.model';
 import { BoatDataService } from '../shared/boat-data.component';
 
 @Component({
   selector: 'app-boat',
-  imports: [],
+  imports: [CommonModule],
+  standalone: true,
   templateUrl: './boat.html',
   styleUrl: './boat.css'
 })

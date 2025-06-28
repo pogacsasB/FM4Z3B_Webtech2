@@ -8,5 +8,6 @@ import { BoatEntry } from "./boat.model";
 export class BoatDataService {
     boatEntries: BoatEntry[] = [
         new BoatEntry(1, "Tantalus", 1500, "Evergreen"),
-        new BoatEntry(2, "The Brutus", 2300, "Maersk")]
+        new BoatEntry(2, "The Brutus", 2300, "Maersk"),
+        new BoatEntry(3, "The Sea Wolf", 1800, "Hapag-Lloyd")]
 }
