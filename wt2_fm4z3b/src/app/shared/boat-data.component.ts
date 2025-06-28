@@ -1,0 +1,12 @@
+import { Injectable } from "@angular/core";
+import { Boat } from "../boat/boat";
+import { BoatEntry } from "./boat.model";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class BoatDataService {
+    boatEntries: BoatEntry[] = [
+        new BoatEntry(1, "Tantalus", 1500, "Evergreen"),
+        new BoatEntry(2, "The Brutus", 2300, "Maersk")]
+}
