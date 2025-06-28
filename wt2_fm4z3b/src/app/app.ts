@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'fm4z3b_beadando';
+  protected title = 'wt2_fm4z3b';
 }
