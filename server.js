@@ -18,6 +18,6 @@ server.listen(8000, function check(error)
         console.log(error);
     }
     else {
-        console.log('started on port 8000');
+        console.log('Server started on port 8000');
     }
 });
