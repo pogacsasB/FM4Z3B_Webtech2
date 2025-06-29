@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="card">
+        <h1>Boat Data Management</h1>
+
+        <form>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Enter the boat name">
+        </div>
+        <div class="form-group">
+            <label>Weight Limit</label>
+            <input type="number" [(ngModel)]="weight_limit" name="weight_limit" class="form-control" id="weightlimit" placeholder="Enter the weight limit">
+        </div>
+        <div class="form-group">
+            <label>Brand</label>
+            <input type="text" [(ngModel)]="brand" name="brand" class="form-control" id="brand" placeholder="Enter the brand">
+        </div>
+        <button type="submit" (click)="register()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

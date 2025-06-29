@@ -6,11 +6,12 @@ const cors = require('cors');
 
 mongoose.connect('mongodb://localhost:27017/wt2_db')
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
+    .catch(err => console.error('MongoDB connection error:', err)
+);
 
+server.use(cors());
 server.use(express.json());
 server.use(routes);
-server.use(cors());
 
 server.listen(8000, function check(error)
 {
