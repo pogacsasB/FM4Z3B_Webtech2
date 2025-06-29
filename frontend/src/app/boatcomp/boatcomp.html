@@ -15,7 +15,32 @@
             <label>Brand</label>
             <input type="text" [(ngModel)]="brand" name="brand" class="form-control" id="brand" placeholder="Enter the brand">
         </div>
-        <button type="submit" (click)="register()" class="btn btn-primary">Submit</button>
+        <button type="submit" (click)="save()" class="btn btn-primary">Submit</button>
         </form>
     </div>
+</div>
+
+<div class="container mt-4" >
+    <h1>List of Boats in the database:</h1>
+    <table class="table">
+        <thead>    
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Weight Limit</th>
+                <th scope="col">Brand</th>  
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let boatdata of boatarray">
+                <td>{{boatdata.name}}</td>
+                <td>{{boatdata.weight_limit}}</td>
+                <td>{{boatdata.brand}}</td>
+            <td>
+        <button type="button" (click)="UpdateBoat(boatdata)" class="btn btn-success">Edit</button>
+        <button type="button" (click)="DeleteBoat(boatdata)" class="btn btn-danger">Delete</button>            
+      </td>
+    </tr>          
+  </tbody>
+</table>
 </div>
