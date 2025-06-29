@@ -17,4 +17,28 @@ var createBoatControllerfn = async (req, res) =>
     }
 }
 
-module.exports = { getDataConntrollerfn, createBoatControllerfn};
+var updateBoatControllerfn = async (req, res) => 
+{
+    console.log(req.params.id);
+    console.log(req.body);
+     
+    var result = await boatService.updateBoatDBService(req.params.id,req.body);
+     if (result) {
+        res.send({ "status": true, "message": "Selected boat has been successfully updated!"} );
+     } else {
+         res.send({ "status": false, "message": "Failed to update the selected boat." });
+     }
+}
+
+var deleteBoatControllerfn = async (req, res) => 
+{
+     console.log(req.params.id);
+     var result = await boatService.removeBoatDBService(req.params.id);
+     if (result) {
+        res.send({ "status": true, "message": "Selected boat has been successfully deleted!"} );
+     } else {
+         res.send({ "status": false, "message": "Failed to update the selected boat." });
+     }
+}
+
+module.exports = { getDataConntrollerfn, createBoatControllerfn, updateBoatControllerfn, deleteBoatControllerfn};

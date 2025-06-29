@@ -24,4 +24,24 @@ module.exports.createBoatDBService = async (boatDetails) => {
         console.error('Error saving boat:', error);
         throw error;
     }
-};
+}
+
+module.exports.updateBoatDBService = async (id, updateData) => {
+    try {
+        const result = await boatModel.findByIdAndUpdate(id, updateData, { new: true });
+        return result;
+    } catch (error) {
+        console.error('Error updating boat:', error);
+        throw error;
+    }
+}
+
+module.exports.removeBoatDBService = async (id) => {
+    try {
+        const result = await boatModel.findByIdAndDelete(id);
+        return result;
+    } catch (error) {
+        console.error('Error deleting boat:', error);
+        throw error;
+    }
+}
