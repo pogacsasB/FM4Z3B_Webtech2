@@ -19,8 +19,6 @@ var createBoatControllerfn = async (req, res) =>
 
 var updateBoatControllerfn = async (req, res) => 
 {
-    console.log(req.params.id);
-    console.log(req.body);
      
     var result = await boatService.updateBoatDBService(req.params.id,req.body);
      if (result) {
@@ -32,7 +30,6 @@ var updateBoatControllerfn = async (req, res) =>
 
 var deleteBoatControllerfn = async (req, res) => 
 {
-     console.log(req.params.id);
      var result = await boatService.removeBoatDBService(req.params.id);
      if (result) {
         res.send({ "status": true, "message": "Selected boat has been successfully deleted!"} );
