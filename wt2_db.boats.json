@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "685ff4361dc0a0b810585dd4"
+  },
+  "name": "Silver Wolf",
+  "weight_limit": 1500,
+  "brand": "Evergreen",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686148676e8ce5e0f3018cbe"
+  },
+  "name": "Tiger",
+  "weight_limit": 3500,
+  "brand": "Hapag-Lloyd",
+  "__v": 0
+}]
